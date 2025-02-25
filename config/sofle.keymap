@@ -94,7 +94,7 @@
 &bt BT_CLR_ALL  &kp INS       &kp PSCRN     &kp K_CMENU   &trans        &trans                          &kp PG_UP   &kp HOME          &kp UP      &kp END    &none    &trans
 &trans          &kp LALT      &kp LCTRL     &kp LSHFT     &trans        &kp CLCK                        &kp PG_DN   &kp LEFT          &kp DOWN    &kp RIGHT  &kp DEL  &kp BSPC
 &trans          &kp K_UNDO    &kp K_CUT     &kp K_COPY    &kp K_PASTE   &trans        &trans    &trans  &kp C_PREV  &kp C_PLAY_PAUSE  &kp C_NEXT  &trans     &none    &none
-                              &trans        &trans        &trans        &trans        &trans    &trans  &trans      &trans            &trans      &trans
+                              &trans        &trans        &trans        &trans        &ht &trans &sleep_behavior   &sleep_behavior  &trans      &trans            &trans      &trans
             >;
 
             sensor-bindings =
