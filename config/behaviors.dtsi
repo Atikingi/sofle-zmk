@@ -1,0 +1,9 @@
+/ {
+    behaviors {
+        sleep_behavior: sleep_behavior {
+            compatible = "zmk,behavior-reset";
+            label = "SLEEP";
+            binding = <&bt BT_SLEEP>;
+        };
+    };
+};
