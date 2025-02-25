@@ -94,7 +94,7 @@
 &bt BT_CLR_ALL  &kp INS       &kp PSCRN     &kp K_CMENU   &trans        &trans                          &kp PG_UP   &kp HOME          &kp UP      &kp END    &none    &trans
 &trans          &kp LALT      &kp LCTRL     &kp LSHFT     &trans        &kp CLCK                        &kp PG_DN   &kp LEFT          &kp DOWN    &kp RIGHT  &kp DEL  &kp BSPC
 &trans          &kp K_UNDO    &kp K_CUT     &kp K_COPY    &kp K_PASTE   &trans        &trans    &trans  &kp C_PREV  &kp C_PLAY_PAUSE  &kp C_NEXT  &trans     &none    &none
-                              &trans        &trans        &trans        &trans        &trans &sleep_behavior   &sleep_behavior  &trans      &trans            &trans      &trans
+                              &trans        &trans        &trans        &trans        &trans &trans  &trans  &trans      &trans            &trans      &trans
             >;
 
             sensor-bindings =
@@ -120,4 +120,31 @@
             >;
         };
     };
+        kscan0: kscan {
+                compatible = "zmk,kscan-gpio-matrix";
+                label = "KSCAN";
+                diode-direction = "col2row";
+
+                col-gpios
+                        = <&gpio0 1 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
+                          <&gpio0 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
+                          <&gpio0 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
+                          <&gpio0 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
+                          <&gpio0 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
+                          <&gpio0 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
+                row-gpios
+                        = <&gpio1 0 GPIO_ACTIVE_HIGH>,
+                          <&gpio1 1 GPIO_ACTIVE_HIGH>,
+                          <&gpio1 2 GPIO_ACTIVE_HIGH>,
+                          <&gpio1 3 GPIO_ACTIVE_HIGH>,
+                          <&gpio1 4 GPIO_ACTIVE_HIGH>,
+                          <&gpio1 5 GPIO_ACTIVE_HIGH>,
+                          <&gpio1 6 GPIO_ACTIVE_HIGH>,
+                          <&gpio1 7 GPIO_ACTIVE_HIGH>,
+                          <&gpio1 8 GPIO_ACTIVE_HIGH>,
+                          <&gpio1 9 GPIO_ACTIVE_HIGH>,
+                          <&gpio1 10 GPIO_ACTIVE_HIGH>,
+                          <&gpio1 11 GPIO_ACTIVE_HIGH>;
+                wakeup-source;
+        };
 };
