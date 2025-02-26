@@ -119,6 +119,11 @@
                                     &none            &none            &none            &none            &none              &none  &none  &none  &none  &none
             >;
         };
+    };
+    &kscan0 {
+        status = "disabled";
+    };
+
         kscan0: kscan {
                 compatible = "zmk,kscan-gpio-matrix";
                 label = "KSCAN";
@@ -146,5 +151,4 @@
                           <&gpio1 11 GPIO_ACTIVE_HIGH>;
                 wakeup-source;
         };
-    };
 };
